@@ -22,15 +22,11 @@ sudo apt-get install -y ros-humble-cv-bridge ros-humble-image-transport \
                         libceres-dev
 ```
 
-### 2. Install RealSense ROS 2 Wrapper
-You must install the official Intel RealSense SDK and the ROS 2 wrapper.
+### 2. Download this Workspace
+Clone this entire pre-configured workspace to your computer:
 ```bash
-# Install librealsense2
-sudo apt-get install ros-humble-librealsense2*
-
-# Clone the ROS 2 wrapper into your workspace
-cd ~/ros2_ws/src
-git clone -b ros2-development https://github.com/IntelRealSense/realsense-ros.git
+cd ~
+git clone https://github.com/ckjunaid/VINS-Fusion-D435i-Workspace.git ros2_ws
 ```
 
 ### 3. Build the Workspace
