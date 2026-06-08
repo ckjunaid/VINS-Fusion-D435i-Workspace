@@ -1,0 +1,8 @@
+By default, the Ubuntu kernel restricts the amount of memory allocated to the USB video (usbcore) buffers. When streaming 3 channels simultaneously (Left IR, Right IR, and IMU data), the camera attempts to burst data faster than the kernel's queue allows, causing a timeout drop.
+
+# Temporarily increase the UVC memory limit to 128MB (Standard is 16MB)
+sudo sh -c 'echo 128 > /sys/module/usbcore/parameters/usbfs_memory_mb'
+
+sudo sh -c 'echo 128 > /sys/module/usbcore/parameters/usbfs_memory_mb'   // temporarly allocate 128Mb memory for video kernal memory
+
+
